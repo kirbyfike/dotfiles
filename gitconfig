@@ -1,0 +1,48 @@
+[user]
+	name = Daniel Wilber
+	email = daniel.wilber@gmail.com
+
+[color]
+	ui = true
+
+[color "branch"]
+	current = cyan
+	local = yellow
+	remote = green
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+
+[color "status"]
+	added = green
+	changed = yellow
+	untracked = red
+
+[core]
+	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	excludesfile = /Users/danielwilber/.gitignore
+	editor = vim
+	
+[alias]
+	st = status
+	ci = commit
+	br = branch
+	co = checkout
+	df = diff
+	dc = diff --cached
+	lg = log -p
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	ls = ls-files
+	ps = push
+	pl = pull
+	aa = add -A
+	cia = commit -a
+
+[github]
+	user = danielwilber
+	token = aeb4b8426f1f6957961ba02c91cc840d
