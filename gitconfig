@@ -1,6 +1,6 @@
 [user]
-	name = Daniel Wilber
-	email = daniel.wilber@gmail.com
+	name = First Last
+	email = your@email.com
 
 [color]
 	ui = true
@@ -44,5 +44,5 @@
 	cia = commit -a
 
 [github]
-	user = danielwilber
-	token = aeb4b8426f1f6957961ba02c91cc840d
+	user = your-username-here
+	token = your-token-here
