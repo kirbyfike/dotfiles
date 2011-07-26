@@ -118,15 +118,12 @@ nmap <S-Left> :bprev<CR>
 " shortcut to edit .vimrc
 nmap <leader>v :edit $MYVIMRC<CR>
 
-" No Help, please
-nmap <F1> <Esc>
-imap <F1> <Esc>
-
 " Command-/ for comments
 map <D-/> <Leader>c<Space>
 
 " Use spacebar for search
 map <Space> /
+nnoremap <esc> :noh<return><esc>
 
 " Use Control and arrow keys to indent
 nmap <C-Right> >>
