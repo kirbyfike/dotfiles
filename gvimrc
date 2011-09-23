@@ -5,10 +5,10 @@
 "--------------------------------------------------------------------------------
 
 " Some room to breath
-set linespace=4
+set linespace=2
 
 " GUI Font
-set gfn=Menlo\ Regular:h12
+set gfn=Nitti\ WM2\ Light:h13
 
 " Fullscreen takes up entire screen
 set fuoptions=maxhorz,maxvert
@@ -17,8 +17,10 @@ set fuoptions=maxhorz,maxvert
 set guioptions-=L
 set guioptions-=r
 set guioptions-=T
-set fu
+" set fu
 set lines=62
+
+color solarized
 
 "--------------------------------------------------------------------------------
 "

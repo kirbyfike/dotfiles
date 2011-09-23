@@ -67,6 +67,7 @@ set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i use
 
+color slate
 
 "--------------------------------------------------------------------------------
 "
@@ -118,15 +119,12 @@ nmap <S-Left> :bprev<CR>
 " shortcut to edit .vimrc
 nmap <leader>v :edit $MYVIMRC<CR>
 
-" No Help, please
-nmap <F1> <Esc>
-imap <F1> <Esc>
-
 " Command-/ for comments
 map <D-/> <Leader>c<Space>
 
 " Use spacebar for search
 map <Space> /
+nnoremap <esc> :noh<return><esc>
 
 " Use Control and arrow keys to indent
 nmap <C-Right> >>
@@ -192,7 +190,6 @@ let delimitMate_expand_space=1
 "---------------------------------------
 
 Bundle "diffchanges.vim"
-
 
 "---------------------------------------
 "  Fugitive
@@ -317,8 +314,14 @@ Bundle "https://github.com/scrooloose/snipmate-snippets.git"
 "---------------------------------------
 
 Bundle "git://github.com/altercation/vim-colors-solarized.git"
-color solarized
+" colorscheme solarized
 set background=dark
+
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+endif
 
 "---------------------------------------
 "  SuperTab
