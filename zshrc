@@ -7,16 +7,20 @@ export ZSH_THEME="danielwilber"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git ruby rails textmate)
+plugins=(git kirby ruby rails textmate)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:~/bin:$PATH"
-export EDITOR="mate"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:~/bin:/Applications/MAMP/Library/bin:$PATH"
+
+echo ""
+
+export EDITOR="vim"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 alias ll="ls -lahG"
-alias twitter="nocorrect twitter"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
