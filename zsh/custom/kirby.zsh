@@ -7,46 +7,13 @@ alias tclover='cd ~/Sites/Clover;'
 alias photo='cd ~/Sites/Clover/Sites/Photosynthesis; git pull; subl .'
 alias findme='open -a finder .'
 alias codebase='cd ~/Desktop/kirby/code\ base; subl .'
-
-
-
-alias mailbp='mail -s "BlueChex Invoice - BPBagley Swamp Wesleyan Church - December 01, 2012" "test@local.cloverpeople.com" <<EOF
-Attached to this e-mail is the BlueChex Invoice for December 01, 2012.
-
-Your account will be ACHd the Invoice Total in the next 3-5 business days
-
-This is an automated email message.  Please do not respond.
-
-If you have any questions, comments, etc., please direct them to:
-
-BluePay Support
-Email: support@bluepay.com
-Toll-Free: 866-412-8324
-
-Having trouble viewing the invoice?  Download Adobe Reader: http://get.adobe.com/reader
-EOF'
-
-alias mailcl='mail -s "BlueChex Invoice - CloverEmmausway - November 03, 2012" "test@local.cloverpeople.com" <<EOF
-Attached to this e-mail is the BlueChex Invoice for December 01, 2012.
-
-Your account will be ACHd the Invoice Total in the next 3-5 business days
-
-This is an automated email message.  Please do not respond.
-
-If you have any questions, comments, etc., please direct them to:
-
-BluePay Support
-Email: support@bluepay.com
-Toll-Free: 866-412-8324
-
-Having trouble viewing the invoice?  Download Adobe Reader: http://get.adobe.com/reader
-EOF'
-
+alias tscrape='cd ~/Desktop/kirby/code\ base/rails/apps/site_scraper; subl .'
+alias testga='cd ~/Desktop/kirby/code\ base/rails/apps/test_ga; subl .'
 
 
 
 alias updatessh='(echo -e "Host *\n   User kirby\n\n" > ~/.ssh/config && cd ~/Sites/Clover/Server-Assets/ && git pull && cat Local\ Files/ssh.config >> ~/.ssh/config)'
-phpconsole() {
+apache() {
     if [[ $@ == "s" || $@ == "start" ]]; then
             command sudo /Applications/MAMP/Library/bin/apachectl start;
     elif [[ $@ == "stop" ]]; then

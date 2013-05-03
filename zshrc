@@ -13,7 +13,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:~/bin:/Applications/MAMP/Library/bin:$PATH"
+export PATH="/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:~/bin:/Applications/MAMP/Library/bin:$PATH"
 
 echo ""
 
@@ -23,4 +23,4 @@ export EDITOR="vim"
 
 alias ll="ls -lahG"
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
