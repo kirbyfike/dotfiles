@@ -23,4 +23,6 @@ export EDITOR="vim"
 
 alias ll="ls -lahG"
 
-#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
+
+PATH=$PATH:/usr/share/ruby-rvm/bin # Add RVM to PATH for scripting

@@ -1,48 +1,18 @@
-"--------------------------------------------------------------------------------
-"
-"  BASICS
-"
-"--------------------------------------------------------------------------------
+" set the paste key (from an outside source ie chrome)
+noremap <Tab>pp	:set paste<CR>
 
-" Some room to breath
-set linespace=2
+" set the font
+set guifont=DejaVu\ Sans\ Mono\ 9
 
-" GUI Font
-set gfn=Nitti\ WM2\ Light:h13
-
-" Fullscreen takes up entire screen
-set fuoptions=maxhorz,maxvert
-
-" Full screen with no scroll/toolbars
-set guioptions-=L
-set guioptions-=r
-set guioptions-=T
-" set fu
-set lines=62
+" set the cursor
+set guicursor=n-v-c:ver10-Cursor
+set guicursor+=i:ver10-Cursor
 
 
-"--------------------------------------------------------------------------------
-"
-"  KEY MAPPINGS
-"
-"--------------------------------------------------------------------------------
+syntax enable
+set background=light
+colorscheme solarized
 
-" Generally speaking, most plug-in specific key bindings are set
-" in the plug-in section of the .vimrc, but some of them have
-" to exist here instead
-
-"---------------------------------------
-"  Command-T
-"---------------------------------------
-
-macmenu &File.New\ Tab key=<D-T>
-map <D-t> :CommandT<CR>
-imap <D-t> <Esc>:CommandT<CR>
-
-"---------------------------------------
-"  Misc.
-"---------------------------------------
-
-" Adjust viewports to the same size
-map <Leader>= <C-w>=
-imap <Leader>= <Esc> <C-w>=
+:imap jj <Esc>
+:set guioptions-=m  "remove menu bar
+:set guioptions-=T "remove toolbar

@@ -8,7 +8,7 @@ rvm_prompt() {
 }
 
 PROMPT='
-%{$fg[31]%} %{$fg[cyan]%}${PWD/#$HOME/~} %{$fg[magenta]%}$(git_prompt_info)
+%{$fg[31]%}%{$fg[cyan]%}${PWD/#$HOME/~} %{$fg[magenta]%}$(git_prompt_info)
 %{$reset_color%}→ '
 
 RPROMPT='%{$fg[green]%}$(rvm_prompt)%{$reset_color%}'
