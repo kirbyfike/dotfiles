@@ -1,7 +1,15 @@
 alias onoz='open -a console /Applications/MAMP/logs/php_error.log'
 alias chrome='google-chrome'
+alias gv='UBUNTU_MENUPROXY= gvim'
+alias dev='~/Documents/dev/code'
+alias personal='~/Documents/personal/code'
 
-alias updatessh='(echo -e "Host *\n   User kirby\n\n" > ~/.ssh/config && cd ~/Sites/Clover/Server-Assets/ && git pull && cat Local\ Files/ssh.config >> ~/.ssh/config)'
+
+# searches for a string the directory structure
+ff () {
+  find  | xargs grep "$1" -sl | view - -c "/$1/";
+}
+
 apache() {
     if [[ $@ == "s" || $@ == "start" ]]; then
             command sudo /Applications/MAMP/Library/bin/apachectl start;

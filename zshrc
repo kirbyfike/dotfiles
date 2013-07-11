@@ -26,3 +26,6 @@ alias ll="ls -lahG"
 PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
 
 PATH=$PATH:/usr/share/ruby-rvm/bin # Add RVM to PATH for scripting
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+export PATH=$HOME/local/bin:$PATH

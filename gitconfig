@@ -42,6 +42,33 @@
 	pl = pull
 	aa = add -A
 	cia = commit -a
+	st = status
+	  ci = !sh -c 'git a && git commit -m \"$0\" && git push'
+	  br = branch
+	  co = checkout
+	  com = checkout master
+	  df = diff
+	  lg = log -p
+	  a = !git add -u && git add . && git status 
+	  undo = reset --hard
+	  rmb = !sh -c 'git branch -D $1 && git push origin :$1' -
+	  create = !sh -c 'ssh git.pnmac.com \"mkdir -p /srv/git/$0.git && cd /srv/git/$0.git && git init --bare --shared=group && chgrp -R developers .\"'
+	  fork = !sh -c 'git create $1 && git clone ssh://git.pnmac.com/srv/git/$1.git && cd $1 && git checkout -b master && git remote add upstream git://git.pnmac.com/$0.git && git fetch upstream && git merge upstream/master && git push origin master'
+	  story = !sh -c 'git checkout -b $0-$1 && git push --set-upstream origin $0-$1'
+	  cos = !sh -c 'STORY_BRANCH=`git branch -a | grep "\\/$0-" | sed -e s/.*$0/$0/` && git checkout $STORY_BRANCH'
+	  bug = !sh -c 'git checkout -b bug-$0-$1 && git push origin bug-$0-$1'
+	  mup = !git fetch origin && git rebase origin/master
+	  up = !git fetch origin && git rebase
+	  sub-up = !git submodule init && git submodule update
+	  prep = !git rebase -i origin/master
+	  done = !git rebase -i origin/master && git checkout master && git merge @{-1} && git push origin master
+	  qa = !git checkout -B qa && git merge master && git push origin qa && git checkout master
+	  ship = !sh -c 'TAG_LABEL=`date "+%Y%m%d.%H%M"` && git checkout qa && git tag -a $TAG_LABEL && git push origin $TAG_LABEL && git checkout -B master'
+	  who = shortlog -n -s --no-merges
+	  tidy = !git remote prune origin && git gc && git clean -dfx && git stash clear
+	  lgg1 = log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
+	  lgg2 = log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n          %C(white)%s%C(reset) %C(bold white)— %an%C(reset)' --abbrev-commit
+	  lgg = !"git lgg1"
 
 [github]
 	user = your-username-here
