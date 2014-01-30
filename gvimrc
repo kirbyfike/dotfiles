@@ -11,5 +11,5 @@ set guicursor=n-i-v-c:ver17-Cursor
 
 set t_Co=256
 syntax enable
-set background=light
-colorscheme coda
+set background=dark
+colorscheme solarized 

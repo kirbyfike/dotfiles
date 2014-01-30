@@ -3,6 +3,7 @@ alias chrome='google-chrome'
 alias gv='UBUNTU_MENUPROXY= gvim'
 alias dev='~/Documents/dev/code'
 alias personal='~/Documents/personal/code'
+alias rervm='HOME; cd -;'
 
 
 # searches for a string the directory structure

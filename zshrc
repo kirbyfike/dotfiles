@@ -29,3 +29,4 @@ PATH=$PATH:/usr/share/ruby-rvm/bin # Add RVM to PATH for scripting
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 export PATH=$HOME/local/bin:$PATH
+PATH=/opt/homebrew/bin:/home/kirby/local/bin:/home/kirby/.rvm/bin:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:~/bin:/Applications/MAMP/Library/bin:/usr/lib/lightdm/lightdm:/usr/sbin:/sbin:/bin:/usr/games:/usr/share/ruby-rvm/bin
