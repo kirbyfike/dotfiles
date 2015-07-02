@@ -3,7 +3,10 @@ alias chrome='google-chrome'
 alias gv='UBUNTU_MENUPROXY= gvim'
 alias dev='~/Documents/dev/code'
 alias personal='~/Documents/personal/code'
+alias hixme='~/Sites/hixme/repos/'
+alias cargo='~/Documents/cargoliner/www.cargoliner.com/spree_site/cargo_spree'
 alias rervm='HOME; cd -;'
+alias findme='open .'
 
 
 # searches for a string the directory structure
@@ -11,17 +14,17 @@ ff () {
   find  | xargs grep "$1" -sl | view - -c "/$1/";
 }
 
-apache() {
-    if [[ $@ == "s" || $@ == "start" ]]; then
-            command sudo /Applications/MAMP/Library/bin/apachectl start;
-    elif [[ $@ == "stop" ]]; then
-            command sudo /Applications/MAMP/Library/bin/apachectl stop;
-    elif [[ $@ == "restart" ]]; then
-            command sudo /Applications/MAMP/Library/bin/apachectl restart;
-    else
-            command sudo /Applications/MAMP/Library/bin/apachectl restart;
-    fi
-}
+# apache() {
+#     if [[ $@ == "s" || $@ == "start" ]]; then
+#             command sudo /Applications/MAMP/Library/bin/apachectl start;
+#     elif [[ $@ == "stop" ]]; then
+#             command sudo /Applications/MAMP/Library/bin/apachectl stop;
+#     elif [[ $@ == "restart" ]]; then
+#             command sudo /Applications/MAMP/Library/bin/apachectl restart;
+#     else
+#             command sudo /Applications/MAMP/Library/bin/apachectl restart;
+#     fi
+# }
 
 # List hosts defined in ssh config
 showhosts() {

@@ -1,10 +1,10 @@
 filetype plugin indent on
 
-execute pathogen#infect()
+"execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-" set the paste key (from an outside source ie chrome)
+"set the paste key (from an outside source ie chrome)
 noremap <Tab>pp	:set paste<CR>
 
 set number

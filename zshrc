@@ -13,20 +13,25 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-export PATH="/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:~/bin:/Applications/MAMP/Library/bin:$PATH"
+export PATH=/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:~/bin:/Applications/MAMP/Library/bin:$PATH
 
-echo ""
+export PATH=/usr/local/share/npm/bin:$PATH
+
+export PATH=/Applications/Postgres\.app/Contents/MacOS:/Applications/Postgres\.app/Contents/MacOS/bin:$PATH
 
 export EDITOR="vim"
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 alias ll="ls -lahG"
 
-PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
+#PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
 
-PATH=$PATH:/usr/share/ruby-rvm/bin # Add RVM to PATH for scripting
+#PATH=$PATH:/usr/share/ruby-rvm/bin # Add RVM to PATH for scripting
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 export PATH=$HOME/local/bin:$PATH
-PATH=/opt/homebrew/bin:/home/kirby/local/bin:/home/kirby/.rvm/bin:/usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:~/bin:/Applications/MAMP/Library/bin:/usr/lib/lightdm/lightdm:/usr/sbin:/sbin:/bin:/usr/games:/usr/share/ruby-rvm/bin
+
+[[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
+
+PATH=/opt/homebrew/bin:usr/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:~/bin:/Applications/MAMP/Library/bin:/usr/lib/lightdm/lightdm:/usr/sbin:/sbin:/bin:/usr/games:$PATH
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
